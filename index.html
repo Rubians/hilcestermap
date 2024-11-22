@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+  <head>
+    <title>Hilcester-upon-Tryn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scripts/leaflet.css">
+    <script src="scripts/leaflet.js"></script>
+  </head>
+  
+  <body style="height: 100%; margin: 0;">
+    <div id="map" style="width: 100%; height: 100%; background: #aaaaaa;"></div>
+    <script type="text/javascript">
+  //Creating the Map
+    var map = L.map('map').setView([0, 0], 0);
+    L.tileLayer('map/{z}/{x}/{y}.png', {
+      continuousWorld: false,
+      noWrap: true,  
+      minZoom: 2,
+      maxZoom: 5,
+    }).addTo(map);
+  //Coordinate Finder
+    /*var marker = L.marker([39.909736, -89.121094], {
+      draggable: true,
+    }).addTo(map);
+    marker.bindPopup('Location Finder').openPopup();
+    marker.on('dragend', function(e) {
+      marker.getPopup().setContent(marker.getLatLng().toString()).openOn(map);
+    });*/
+  //Markers
+    var caerwyn = L.marker([-11.264612, 65.302734]).bindPopup('<b>Mr Caerwyn Bevans</b><br/>Flat LG (Lower Ground)<br/>16 Daugherty Lane<br/>Hilcester-upon-Tryn NG5 4DD');
+    caerwyn.bindTooltip("Chez Caerwyn");
+    var fergal = L.marker([40.780541, -95.625]).bindPopup('<b>Mr Fergal Armitage</b><br/>41 Oakleigh Road<br/>Hilcester-upon-Tryn NG5 4DD');
+    fergal.bindTooltip("Chez Fergal");
+    var griffith = L.marker([37.160317, -45.175781]).bindPopup('<b>Mrs Jack Griffith &<br/>Miss Senna Clerc-Griffith</b><br/>04 Elmbrdige Road<br/>Hilcester-upon-Tryn NG5 4DD');
+    griffith.bindTooltip("Chez Jack et Senna");
+    var logementu = L.marker([-35.960223, -75.410156]).bindPopup('<b>Logement Universitaire</b><br/>University Road<br/>Hilcester-upon-Tryn NG5 4DD');
+    logementu.bindTooltip("Logement Universitaire");
+    var roann = L.marker([15.792254, 15.644531]).bindPopup('<b>Miss Roann Taggart</b><br/>Flat 4 (4th Floor)<br/>256 Queen\'s Road<br/>Hilcester-upon-Tryn NG5 4DD');
+    roann.bindTooltip("Chez Roann");
+    var septimus = L.marker([-60.75916, -54.140625]).bindPopup('<b>Mr Septimus Veturia</b><br/><i>Chubby Pompom</i><br/>13 Great George Street<br/>Hilcester-upon-Tryn NG5 4DD');
+    septimus.bindTooltip("Chez Septimus");
+    var vanaken = L.marker([62.349609, -39.726563]).bindPopup('<b>Famille van Aken</b><br/>Hawthorne Road<br/>Hilcester-upon-Tryn NG5 4DD');
+    vanaken.bindTooltip("Chez les van Aken");
+
+    var pont = L.marker([72.235514, -115.664063]).bindPopup('<center><b>Pont des Dryades</b><br/>Pitoresque petit pont en pierre</center>');
+    var mortanya = L.marker([61.270233, -80.507813]).bindPopup('<center><b>Lieu de mort d\'Anya Kapoor</b><br/>Fait divers survenu en 1992</center>');
+    var sanctuaire = L.marker([71.856229, 35.859375]).bindPopup('<center><b>Le Sanctuaire</b><br/>Centre de Sauvegarde<br/>de la Faune Sauvage<br/>(CSFS)</center>');
+
+    var broceliande = L.marker([-4.915833, -31.289063]).bindPopup('<center><b>Le Brocéliande</b><br/>Restaurant français</center>');
+    var drownedgirl = L.marker([52.908902, -77.080078]).bindPopup('<center><b>The Drowned Girl</b><br/>Bar à mauvaise réputation</center>');
+    var winifred = L.marker([14.774883, -1.757813]).bindPopup('<center><b>Basilique St Winifred</b><br/>Édifice religieux à l\'architecture<br/>gothique du XIIIème siècle</center>');
+    var universite = L.marker([-46.316584, -87.1875]).bindPopup('<center><b>Université de Hilcester</b><br/>Campus universitaire spécialisées dans les sciences et les arts</center>');
+
+  //Marker Groups
+    var g_cities = L.layerGroup([roann, caerwyn, septimus, fergal, griffith, vanaken, logementu]);
+    var g_poi = L.layerGroup([pont, mortanya, sanctuaire]);
+    var g_places = L.layerGroup([broceliande, winifred, universite, drownedgirl]);
+  //Marker Overlay
+    var overlays = {
+      "Habitations": g_cities,
+      "Points d'intérêt": g_poi,
+      "Lieux": g_places
+    }
+    g_cities.addTo(map);
+    g_poi.addTo(map);
+    g_places.addTo(map);
+    //GROUP CONTROLS
+    L.control.layers(null, overlays).addTo(map);
+    /*Polylines
+    var latlngs = [
+    [-37.71859, 15.292969],
+    [-36.315125, 18.149414],
+    [-35.46067, 21.401367],
+    [-34.234512, 29.487305],
+    [-32.398516, 33.00293],
+    [-31.203405, 35.200195],
+    [-31.052934, 44.912109],
+    [-34.161818, 60.952148]    
+    ];  
+
+    var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+    polyline.bindTooltip("Road?");
+  //Polygon    
+    var polygon = L.polygon([
+      [-27.527758, -88.857422],
+      [-40.111689, -76.289063],
+      [-50.903033, -100.283203],
+      [-42.423457, -114.960938]
+    ], {color: 'green'}).addTo(map);
+     polygon.bindPopup("A polygon.");
+     polygon.bindTooltip("A polygon");*/
+    </script>
+  </body>
+</html>
