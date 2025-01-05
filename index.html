@@ -180,8 +180,8 @@
     //MARQUEURS HABITATIONS
     var belem = L.marker([8.05923, -21.533203],markerMaison).bindPopup('<b>Mr Belem Avalon</b><br/>02 Old Mill Row<br/>Hilcester-upon-Tryn NG5 4DD');
     belem.bindTooltip("Chez Belem");
-    var caerwyn = L.marker([-11.264612, 65.302734],markerMaison).bindPopup('<b>Mr Caerwyn Bevans</b><br/>Flat LG (Lower Ground)<br/>16 Daugherty Lane<br/>Hilcester-upon-Tryn NG5 4DD');
-    caerwyn.bindTooltip("Chez Caerwyn");
+    var caerwyn = L.marker([-11.264612, 65.302734],markerMaison).bindPopup('<b>Mr Caerwyn Bevans &<br>Miss Teodora von Meissen</b><br/>Flat LG (Lower Ground)<br/>16 Daugherty Lane<br/>Hilcester-upon-Tryn NG5 4DD');
+    caerwyn.bindTooltip("Chez Caerwyn et Teddy");
     var damon = L.marker([13.581921, 47.460938],markerMaison).bindPopup('<b>Mr Damon Rossi</b><br/>36 Highfield Avenue<br/>Hilcester-upon-Tryn NG5 4DD');
     damon.bindTooltip("Chez Damon");
     var fergal = L.marker([40.780541, -95.625],markerMaison).bindPopup('<b>Mr Fergal Armitage</b><br/>41 Oakleigh Road<br/>Hilcester-upon-Tryn NG5 4DD');
@@ -190,6 +190,8 @@
     grantshank.bindTooltip("Chez Nahema et les McCruikshank");
     var griffith = L.marker([46.498392, -42.363281],markerMaison).bindPopup('<b>Mrs Jack Griffith &<br/>Miss Senna Clerc-Griffith</b><br/>04 Elmbridge Road<br/>Hilcester-upon-Tryn NG5 4DD');
     griffith.bindTooltip("Chez Jack et Senna");
+    var inwoo = L.marker([-38.822591, 84.023438],markerMaison).bindPopup('<b>Mr Chae In Woo</b><br/>09 Garrison Gate<br/>Hilcester-upon-Tryn NG5 4DD');
+    inwoo.bindTooltip("Chez In Woo");
     var logementu = L.marker([-35.960223, -75.410156],markerMaison).bindPopup('<b>Logement Universitaire</b></br><i>Chez Saige Billington</i><br/>10 University Road<br/>Hilcester-upon-Tryn NG5 4DD');
     logementu.bindTooltip("Logement Universitaire");
     var lucius = L.marker([47.576526, 9.228516],markerMaison).bindPopup('<b>Mr Victor Chase</b><br/>Flat 6 (2nd Floor)<br/>322 Queen\'s Road<br/>Hilcester-upon-Tryn NG5 4DD');
@@ -227,6 +229,7 @@
     var stade = L.marker([-70.377854, 21.796875],markerLieu).bindPopup('<center><b>Stade Brian Clough</b><br/>Stade aux gradins couverts<br>adapté pour les sports collectifs sur gazon</center>');
     var universite = L.marker([-46.316584, -87.1875],markerTravail).bindPopup('<center><b>Université de Hilcester</b><br/>Campus universitaire spécialisées dans les sciences et les arts</center>');
     var winifred = L.marker([14.774883, -1.757813],markerEglise).bindPopup('<center><b>Basilique St Winifred</b><br/>Édifice religieux à l\'architecture<br/>gothique du XIIIème siècle</center>');
+    var crimson = L.marker([11.695273, -60.292969],markerLieu).bindPopup('<center><b>The Crimson Theater</b><br/>Théâtre principal et opéra de Hilcester-upon-Tryn.<br/>Construit au XIXème siècle</center>');
 
     //MARQUEURS RESTOS & BARS
     var bunnybar = L.marker([-33.72434, -45.087891],markerBar).bindPopup('<center><b>Bunnybar</b></br><i>Tenu par Septimus Veturia</i><br/>Bar à lapins</center>');
@@ -245,9 +248,9 @@
     var sybille = L.marker([-50.736455, -31.640625],markerParc).bindPopup('<center><b>St Sybille Park</b><br/>Principal parc du quartier<br>de Brackens Grove</center>');
 
   //Marker Groups
-    var g_houses = L.layerGroup([roann, caerwyn, septimus, fergal, griffith, vanaken, logementu, damon, lucius, rajan, belem, grantshank]);
+    var g_houses = L.layerGroup([roann, caerwyn, septimus, fergal, griffith, vanaken, logementu, damon, lucius, rajan, belem, grantshank, inwoo]);
     var g_poi = L.layerGroup([pont, mortanya, marais, brangton, etang]);
-    var g_places = L.layerGroup([winifred, universite, sanctuaire, mairie, cuthbert, hopitalU, gare, commissariat, ccommercial, cimetiere, sport, patinoire, stade, circuit, cequestre]);
+    var g_places = L.layerGroup([winifred, crimson, universite, sanctuaire, mairie, cuthbert, hopitalU, gare, commissariat, ccommercial, cimetiere, sport, patinoire, stade, circuit, cequestre]);
     var g_resto = L.layerGroup([broceliande, drownedgirl, morganeye, silverbells, bunnybar, threehorses, twoducks, hunterlair, queermutiny]);
     var g_parc = L.layerGroup([greatoak, sybille, michael, kingsrow]);
 
