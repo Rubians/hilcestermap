@@ -129,6 +129,18 @@
       icon: customBatiment,
     }
 
+    var club = {
+      iconUrl: "./scripts/images/club.png",
+      iconSize: [25,35],
+      iconAnchor:   [12, 35],
+      popupAnchor:  [0, -40],
+      tooltipAnchor: Point = [15, -20]
+    }
+    var customClub = L.icon(club);
+    var markerClub = {
+      icon: customClub,
+    }
+
     var hopital = {
       iconUrl: "./scripts/images/hopital.png",
       iconSize: [25,35],
@@ -180,16 +192,20 @@
     //MARQUEURS HABITATIONS
     var adrian = L.marker([-68.911005, -3.21875],markerMaison).bindPopup('<b>Mr Adrian Greyson</b><br/>14 Parson\'s Row<br/>Hilcester-upon-Tryn NG5 4DD');
     adrian.bindTooltip("Chez Adrian");
+    var ambroise = L.marker([50.625073, 35.419922],markerMaison).bindPopup('<b>Mr Ambroise Erskine</b><br/><i>"Raven", boutique d\'ésotérisme</i><br/>31 Gallows End<br/>Hilcester-upon-Tryn NG5 4DD');
+    ambroise.bindTooltip("Chez Ambroise");
     var angus = L.marker([-43.325178, 30.585938],markerMaison).bindPopup('<b>Mr Angus Knowles</b><br/>Flat 10 (10th Floor)<br>241 Alcester Street<br/>Hilcester-upon-Tryn NG5 4DD');
     angus.bindTooltip("Chez Angus");
+    var arthur = L.marker([31.952162, -11.601563],markerMaison).bindPopup('<b>Mr Arthur Bevans</b><br/><i>Chez Fionn & Joan O\'Donnell</i><br/>74 Cobblewright Lane<br/>Hilcester-upon-Tryn NG5 4DD');
+    arthur.bindTooltip("Chez Arthur");
     var belem = L.marker([8.05923, -21.533203],markerMaison).bindPopup('<b>Mr Belem Avalon</b><br/>02 Old Mill Row<br/>Hilcester-upon-Tryn NG5 4DD');
     belem.bindTooltip("Chez Belem");
-    var caerwyn = L.marker([-11.264612, 65.302734],markerMaison).bindPopup('<b>Mr Caerwyn Bevans &<br>Miss Teodora von Meissen</b><br/>Flat LG (Lower Ground)<br/>16 Daugherty Lane<br/>Hilcester-upon-Tryn NG5 4DD');
+    var caerwyn = L.marker([-29.22889, -27.773438],markerMaison).bindPopup('<b>Mr Caerwyn Bevans &<br>Miss Teodora von Meissen</b><br/>Flat B (1st Floor)<br/>07 Renfield Square<br/>Hilcester-upon-Tryn NG5 4DD');
     caerwyn.bindTooltip("Chez Caerwyn et Teddy");
     var damon = L.marker([13.581921, 47.460938],markerMaison).bindPopup('<b>Mr Damon Rossi</b><br/>36 Highfield Avenue<br/>Hilcester-upon-Tryn NG5 4DD');
     damon.bindTooltip("Chez Damon");
-    var fergal = L.marker([40.780541, -95.625],markerMaison).bindPopup('<b>Mr Fergal Armitage</b><br/>41 Oakleigh Road<br/>Hilcester-upon-Tryn NG5 4DD');
-    fergal.bindTooltip("Chez Fergal");
+    var fergal = L.marker([40.780541, -95.625],markerMaison).bindPopup('<b>Mr Fergal Armitage &<br/>Mr Silas Jørgensen</b><br/>41 Oakleigh Road<br/>Hilcester-upon-Tryn NG5 4DD');
+    fergal.bindTooltip("Chez Fergal & Silas");
     var grantshank = L.marker([-42.55308, -20.390625],markerMaison).bindPopup('<b>Miss Nahema Grant,<br>Mr Lachlann McCruikshank &<br>Miles McCruikshank</b><br/>Flat 5 (3rd Floor)<br/>5 Foxglove Way<br/>Hilcester-upon-Tryn NG5 4DD');
     grantshank.bindTooltip("Chez Nahema et les McCruikshank");
     var griffith = L.marker([46.498392, -42.363281],markerMaison).bindPopup('<b>Mrs Jack Griffith &<br/>Miss Senna Clerc-Griffith</b><br/>04 Elmbridge Road<br/>Hilcester-upon-Tryn NG5 4DD');
@@ -204,7 +220,7 @@
     rajan.bindTooltip("Chez Rajan");
     var roann = L.marker([15.792254, 15.644531],markerMaison).bindPopup('<b>Miss Roann Taggart</b><br/>Flat 4 (4th Floor)<br/>256 Queen\'s Road<br/>Hilcester-upon-Tryn NG5 4DD');
     roann.bindTooltip("Chez Roann");
-    var septimus = L.marker([-60.75916, -54.140625],markerMaison).bindPopup('<b>Mr Septimus Veturia</b><br/><i>Chubby Pompom</i><br/>13 Great George Street<br/>Hilcester-upon-Tryn NG5 4DD');
+    var septimus = L.marker([-60.75916, -54.140625],markerMaison).bindPopup('<b>Mr Septimus Veturia</b><br/><i>"Chubby Pompom", refuge à lapins</i><br/>13 Great George Street<br/>Hilcester-upon-Tryn NG5 4DD');
     septimus.bindTooltip("Chez Septimus");
     var vanaken = L.marker([62.349609, -39.726563],markerMaison).bindPopup('<b>Famille van Aken</b><br/>Hawthorne Road<br/>Hilcester-upon-Tryn NG5 4DD');
     vanaken.bindTooltip("Chez les van Aken");
@@ -223,17 +239,20 @@
     var cequestre = L.marker([-76.184995, -43.242188],markerLieu).bindPopup('<center><b>Centre Équestre des Saules</b><br/>Contient une écurie, un haras<br/>ainsi qu\'un hippodrome</center>');
     var circuit = L.marker([-80.05805, 75.234375],markerLieu).bindPopup('<center><b>Circuit automobile Peter Collins</b><br/>Piste bitumée pour les sports motorisés<br></center>');
     var commissariat = L.marker([-27.137368, 3.911133],markerPolice).bindPopup('<center><b>Hôtel de Police</b><br/>Quartier général de la police<br>de Hilcester-upon-Tryn</center>');
+    var crimson = L.marker([11.695273, -60.292969],markerLieu).bindPopup('<center><b>The Crimson Theater</b><br/>Théâtre principal et opéra de Hilcester-upon-Tryn.<br/>Construit au XIXème siècle</center>');
     var cuthbert = L.marker([57.891497, 10.546875],markerEglise).bindPopup('<center><b>Église St Cuthbert</b><br/>Édifice religieux à l\'architecture<br/>baroque du XVIIIème siècle</center>');
     var gare = L.marker([17.308688, 30.234375],markerLieu).bindPopup('<center><b>Gare Edward VII</b><br/>Gare ferroviaire de Hilcester-upon-Tryn<br/>Construite au XIXème siècle</center>');
     var hopitalU = L.marker([-56.752723, -97.382812],markerHopital).bindPopup('<center><b>Hôpital Universitaire du Tryn</b><br/>Principal centre hospitalier</br>de Hilcester-upon-Tryn</center>');
     var mairie = L.marker([26.115986, -31.992188],markerBatiment).bindPopup('<center><b>Hôtel de Ville</b><br/>Mairie de Hilcester-upon-Tryn</br><i>Maire actuelle : <a href="https://leauquidort.forumactif.com/t20-bottin-des-pnj#119">Alicia Saunders</a></i></center>');
+    var pandemonium = L.marker([0.527336, 8.613281],markerClub).bindPopup('<center><b>Pandemonium</b><br/>Nightclub principal et branché de la ville<br/>Existe depuis 1991</center>');
     var patinoire = L.marker([-31.391158, 27.861328],markerLieu).bindPopup('<center><b>Patinoire de Hilcester</b><br/>Contient une piste pour rollers<br>et une patinoire pour hockey<br>et patinage sur glace</center>');
     var sanctuaire = L.marker([71.856229, 35.859375],markerLieu).bindPopup('<center><b>Le Sanctuaire</b><br/>Centre de Sauvegarde<br/>de la Faune Sauvage<br/>(CSFS)<br><i>Dirigé par <a href="https://leauquidort.forumactif.com/t20-bottin-des-pnj#268">Ava Bennett</a></i></center>');
+    var skatepark = L.marker([-60.951777, -2.768555],markerLieu).bindPopup('<center><b>Skatepark abandonné</b><br/>Infracstructure condamnée<br>Devenu place de deal principal de Hilcester<br></center>');
     var sport = L.marker([-17.560247, 31.552734],markerLieu).bindPopup('<center><b>Salle de sport</b><br/>Principal complexe sportif<br>de Hilcester-upon-Tryn<br><i>Dirigée par <a href="https://leauquidort.forumactif.com/t20-bottin-des-pnj#120">Paddy Gallagher</a></i></center>');
     var stade = L.marker([-70.377854, 21.796875],markerLieu).bindPopup('<center><b>Stade Brian Clough</b><br/>Stade aux gradins couverts<br>adapté pour les sports collectifs sur gazon</center>');
+    var tribunal = L.marker([14.604847, -39.023438],markerBatiment).bindPopup('<center><b>Palais de justice</b><br/>Mairie de Hilcester-upon-Tryn</br><i>Maire actuelle : <a href="https://leauquidort.forumactif.com/t20-bottin-des-pnj#119">Alicia Saunders</a></i></center>');
     var universite = L.marker([-46.316584, -87.1875],markerTravail).bindPopup('<center><b>Université de Hilcester</b><br/>Campus universitaire spécialisées dans les sciences et les arts</center>');
     var winifred = L.marker([14.774883, -1.757813],markerEglise).bindPopup('<center><b>Basilique St Winifred</b><br/>Édifice religieux à l\'architecture<br/>gothique du XIIIème siècle</center>');
-    var crimson = L.marker([11.695273, -60.292969],markerLieu).bindPopup('<center><b>The Crimson Theater</b><br/>Théâtre principal et opéra de Hilcester-upon-Tryn.<br/>Construit au XIXème siècle</center>');
 
     //MARQUEURS RESTOS & BARS
     var bunnybar = L.marker([-33.72434, -45.087891],markerBar).bindPopup('<center><b>Bunny Bar</b></br><i>Tenu par Septimus Veturia</i><br/>Bar à lapins</center>');
@@ -249,14 +268,15 @@
     var greatoak = L.marker([-3.864255, -17.929688],markerParc).bindPopup('<center><b>Great Oak Square</b><br/>Grande place et cœur de la ville</center>');
     var kingsrow = L.marker([-37.71859, 1.142578],markerParc).bindPopup('<center><b>King\'s Row Square</b><br/>Square verdoyant du quartier<br>de Brackens Grove</center>');
     var michael = L.marker([12.897489, 62.929688],markerParc).bindPopup('<center><b>St Michael Park</b><br/>Parc du quartier<br>de Greenveil Hill</center>');
+    var renfield = L.marker([-27.527758, -21.796875],markerParc).bindPopup('<center><b>Renfield Square</b><br/>Petit square tranquille<br>de Greenveil Hill</center>');
     var sybille = L.marker([-50.736455, -31.640625],markerParc).bindPopup('<center><b>St Sybille Park</b><br/>Principal parc du quartier<br>de Brackens Grove</center>');
 
   //Marker Groups
-    var g_houses = L.layerGroup([adrian, angus, roann, caerwyn, septimus, fergal, griffith, vanaken, logementu, damon, lucius, rajan, belem, grantshank, inwoo]);
+    var g_houses = L.layerGroup([adrian, ambroise, angus, arthur, roann, caerwyn, septimus, fergal, griffith, vanaken, logementu, damon, lucius, rajan, belem, grantshank, inwoo]);
     var g_poi = L.layerGroup([pont, mortanya, marais, brangton, etang]);
-    var g_places = L.layerGroup([winifred, crimson, universite, sanctuaire, mairie, cuthbert, hopitalU, gare, commissariat, ccommercial, cimetiere, sport, patinoire, stade, circuit, cequestre]);
+    var g_places = L.layerGroup([winifred, crimson, universite, pandemonium, sanctuaire, mairie, cuthbert, hopitalU, gare, commissariat, ccommercial, cimetiere, skatepark, sport, patinoire, tribunal, stade, circuit, cequestre]);
     var g_resto = L.layerGroup([broceliande, drownedgirl, morganeye, silverbells, bunnybar, threehorses, twoducks, hunterlair, queermutiny]);
-    var g_parc = L.layerGroup([greatoak, sybille, michael, kingsrow]);
+    var g_parc = L.layerGroup([greatoak, sybille, michael, kingsrow, renfield]);
 
   //Marker Overlay
     var overlays = {
