@@ -200,12 +200,16 @@
     arthur.bindTooltip("Chez Arthur");
     var belem = L.marker([8.05923, -21.533203],markerMaison).bindPopup('<b>Mr Belem Avalon</b><br/>02 Old Mill Row<br/>Hilcester-upon-Tryn NG5 4DD');
     belem.bindTooltip("Chez Belem");
+    var bethany = L.marker([25.482951, -2.988281],markerMaison).bindPopup('<b>Miss Bethany Hawley</b><br/>101 Cobblewright Lane<br/>Hilcester-upon-Tryn NG5 4DD');
+    bethany.bindTooltip("Chez Bethany");
     var caerwyn = L.marker([-29.22889, -27.773438],markerMaison).bindPopup('<b>Mr Caerwyn Bevans &<br>Miss Teodora von Meissen</b><br/>Flat B (1st Floor)<br/>07 Renfield Square<br/>Hilcester-upon-Tryn NG5 4DD');
     caerwyn.bindTooltip("Chez Caerwyn et Teddy");
     var damon = L.marker([13.581921, 47.460938],markerMaison).bindPopup('<b>Mr Damon Rossi</b><br/>36 Highfield Avenue<br/>Hilcester-upon-Tryn NG5 4DD');
     damon.bindTooltip("Chez Damon");
     var desmond = L.marker([21.371244, -71.586914],markerMaison).bindPopup('<b>Mr Desmond Blackwell</b><br/><i>"Mirror\'s End", club clandestin</i><br/>04 Sherperd\'s Close<br/>Hilcester-upon-Tryn NG5 4DD');
     desmond.bindTooltip("Chez Desmond");
+    var elric = L.marker([-15.029686, -68.818359],markerMaison).bindPopup('<b>Mr Elric Wollstone</b><br/>Flat 8 (4th Floor)<br/>12 Winston Street<br/>Hilcester-upon-Tryn NG5 4DD');
+    elric.bindTooltip("Chez Elric");
     var fergal = L.marker([40.780541, -95.625],markerMaison).bindPopup('<b>Mr Fergal Armitage &<br/>Mr Silas Jørgensen</b><br/>41 Oakleigh Road<br/>Hilcester-upon-Tryn NG5 4DD');
     fergal.bindTooltip("Chez Fergal & Silas");
     var grantshank = L.marker([-42.55308, -20.390625],markerMaison).bindPopup('<b>Miss Nahema Grant,<br>Mr Lachlann McCruikshank &<br>Miles McCruikshank</b><br/>Flat 5 (3rd Floor)<br/>5 Foxglove Way<br/>Hilcester-upon-Tryn NG5 4DD');
@@ -214,6 +218,8 @@
     griffith.bindTooltip("Chez Jack et Senna");
     var inwoo = L.marker([-38.822591, 84.023438],markerMaison).bindPopup('<b>Mr Chae In Woo</b><br/>09 Garrison Gate<br/>Hilcester-upon-Tryn NG5 4DD');
     inwoo.bindTooltip("Chez In Woo");
+    var lex = L.marker([51.069017, 5.800781],markerMaison).bindPopup('<b>Miss Alexandra Rossi</b><br/>Flat 7 (3rd Floor)<br/>393 Queen\'s Road<br/>Hilcester-upon-Tryn NG5 4DD');
+    lex.bindTooltip("Chez Lex");
     var logementu = L.marker([-35.960223, -75.410156],markerMaison).bindPopup('<b>Logement Universitaire</b></br><i>Chez Saige Billington</i><br/>10 University Road<br/>Hilcester-upon-Tryn NG5 4DD');
     logementu.bindTooltip("Logement Universitaire");
     var lucius = L.marker([47.576526, 9.228516],markerMaison).bindPopup('<b>Mr Victor Chase</b><br/>Flat 6 (2nd Floor)<br/>322 Queen\'s Road<br/>Hilcester-upon-Tryn NG5 4DD');
@@ -224,6 +230,10 @@
     roann.bindTooltip("Chez Roann");
     var septimus = L.marker([-60.75916, -54.140625],markerMaison).bindPopup('<b>Mr Septimus Veturia</b><br/><i>"Chubby Pompom", refuge à lapins</i><br/>13 Great George Street<br/>Hilcester-upon-Tryn NG5 4DD');
     septimus.bindTooltip("Chez Septimus");
+    var swann = L.marker([-4.390229, -55.546875],markerMaison).bindPopup('<b>Mr Swann Fowler</b><br/>208 Vein<br/>Hilcester-upon-Tryn NG5 4DD');
+    swann.bindTooltip("Chez Swann");
+    var uriel = L.marker([-14.774883, -91.40625],markerMaison).bindPopup('<b>Mr Uriel Chapman</b><br/>08 Eddowes Lane<br/>Hilcester-upon-Tryn NG5 4DD');
+    uriel.bindTooltip("Chez Uriel");
     var vanaken = L.marker([62.349609, -39.726563],markerMaison).bindPopup('<b>Famille van Aken</b><br/>Hawthorne Road<br/>Hilcester-upon-Tryn NG5 4DD');
     vanaken.bindTooltip("Chez les van Aken");
 
@@ -274,7 +284,7 @@
     var sybille = L.marker([-50.736455, -31.640625],markerParc).bindPopup('<center><b>St Sybille Park</b><br/>Principal parc du quartier<br>de Brackens Grove</center>');
 
   //Marker Groups
-    var g_houses = L.layerGroup([adrian, ambroise, angus, arthur, desmond, roann, caerwyn, septimus, fergal, griffith, vanaken, logementu, damon, lucius, rajan, belem, grantshank, inwoo]);
+    var g_houses = L.layerGroup([adrian, ambroise, angus, arthur, bethany, desmond, roann, caerwyn, septimus, fergal, griffith, uriel, lex, elric, vanaken, logementu, damon, lucius, rajan, swann, belem, grantshank, inwoo]);
     var g_poi = L.layerGroup([pont, mortanya, marais, brangton, etang]);
     var g_places = L.layerGroup([winifred, crimson, universite, pandemonium, sanctuaire, mairie, cuthbert, hopitalU, gare, commissariat, ccommercial, cimetiere, skatepark, sport, patinoire, tribunal, stade, circuit, cequestre]);
     var g_resto = L.layerGroup([broceliande, drownedgirl, morganeye, silverbells, bunnybar, threehorses, twoducks, hunterlair, queermutiny]);
